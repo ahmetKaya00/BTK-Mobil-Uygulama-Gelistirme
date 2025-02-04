@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:widget/pages/cloumn_page.dart';
+import 'package:widget/pages/container_page.dart';
 import 'package:widget/pages/row_page.dart';
 void main(){
   runApp(myApp());
@@ -30,6 +32,24 @@ class HomePage extends StatelessWidget{
               Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => RowPage()),
+              );
+            },
+          ),
+          ListTile(
+            title: Text("Column Widget Page"),
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CloumnPage()),
+              );
+            },
+          ),
+          ListTile(
+            title: Text("Container Widget Page"),
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ContainerPage()),
               );
             },
           )
