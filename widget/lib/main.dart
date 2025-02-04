@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:widget/row_page.dart';
+import 'package:widget/pages/row_page.dart';
 void main(){
   runApp(myApp());
 }
