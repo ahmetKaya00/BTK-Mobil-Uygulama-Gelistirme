@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:widget/pages/cloumn_page.dart';
 import 'package:widget/pages/container_page.dart';
+import 'package:widget/pages/elevated_button.dart';
 import 'package:widget/pages/grid_page.dart';
 import 'package:widget/pages/listview_page.dart';
 import 'package:widget/pages/row_page.dart';
@@ -80,6 +81,15 @@ class HomePage extends StatelessWidget{
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => ListViewPage()),
+              );
+            },
+          ),
+          ListTile(
+            title: Text("Elevated Button Page"),
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ElevatedPage()),
               );
             },
           ),
