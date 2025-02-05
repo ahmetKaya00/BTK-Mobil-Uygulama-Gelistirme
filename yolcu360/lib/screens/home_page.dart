@@ -40,11 +40,11 @@ class _HomeScreenState extends State<HomeScreen>{
         unselectedItemColor: Colors.grey,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
+            icon: Icon(Icons.calendar_month),
             label: "Ara"
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.travel_explore),
+              icon: Icon(Icons.local_offer),
               label: "Kapmanyalar"
           ),
           BottomNavigationBarItem(
@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen>{
               label: "Hesabım"
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.more),
+              icon: Icon(Icons.more_horiz),
               label: "More"
           )
         ],
