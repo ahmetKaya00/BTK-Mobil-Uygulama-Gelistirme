@@ -6,6 +6,7 @@ class SettingsScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     final themeManager = Provider.of<ThemeManager>(context);
+
     return Center(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -16,7 +17,7 @@ class SettingsScreen extends StatelessWidget{
             onChanged: (value){
             themeManager.toggleTheme();
             },
-          )
+          ),
         ],
       ),
     );
