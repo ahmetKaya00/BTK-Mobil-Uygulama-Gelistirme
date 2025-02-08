@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebasedemo/core/localemanager.dart';
+import 'package:firebasedemo/screens/login_screen.dart';
 import 'package:firebasedemo/screens/profile_screen.dart';
 import 'package:firebasedemo/screens/settings_screen.dart';
 import 'package:firebasedemo/widget/bottom_nav_bar.dart';
@@ -19,10 +21,29 @@ class _HomeScreenState extends State<HomeScreen>{
     SettingsScreen()
   ];
 
-  void _onItemTapped(int index){
-    setState(() {
-      _selectedIndex = index;
-    });
+  void _onItemTapped(int index) async{
+    if(index == 1){
+      final currentUser = FirebaseAuth.instance.currentUser;
+      if(currentUser == null){
+        final result = await Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context)=>LoginScreen()),
+        );
+        if(result == true){
+          setState(() {
+            _selectedIndex = index;
+          });
+        }
+      }else{
+        setState(() {
+          _selectedIndex = index;
+        });
+      }
+    }else{
+      setState(() {
+        _selectedIndex = index;
+      });
+    }
   }
   @override
   Widget build(BuildContext context) {
