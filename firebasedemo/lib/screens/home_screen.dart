@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebasedemo/core/localemanager.dart';
+import 'package:firebasedemo/screens/crud_screen.dart';
 import 'package:firebasedemo/screens/login_screen.dart';
 import 'package:firebasedemo/screens/profile_screen.dart';
 import 'package:firebasedemo/screens/settings_screen.dart';
@@ -63,6 +64,7 @@ class _HomeScreenState extends State<HomeScreen>{
           ),
           ProfileScreen(),
           SettingsScreen(),
+          CrudScreen(),
         ],
       ),
       bottomNavigationBar: BottomNavBar(

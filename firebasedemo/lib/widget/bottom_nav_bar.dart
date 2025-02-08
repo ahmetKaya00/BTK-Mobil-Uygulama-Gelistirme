@@ -10,6 +10,9 @@ class BottomNavBar extends StatelessWidget{
     return BottomNavigationBar(
       currentIndex: selectedIndex,
         onTap: onTop,
+        backgroundColor: Colors.white,
+        unselectedItemColor: Colors.grey,
+        selectedItemColor: Colors.blue,
         items: const[
           BottomNavigationBarItem(
               icon: Icon(Icons.home),
@@ -22,6 +25,10 @@ class BottomNavBar extends StatelessWidget{
           BottomNavigationBarItem(
               icon: Icon(Icons.settings),
               label: 'Ayarlar'
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              label: 'CRUD'
           )
         ]
     );
