@@ -1,4 +1,5 @@
 import 'package:firebasedemo/models/authentication_model.dart';
+import 'package:firebasedemo/screens/register_screen.dart';
 import 'package:flutter/material.dart';
 class LoginScreen extends StatefulWidget{
   @override
@@ -44,8 +45,18 @@ class _LoginScreenState extends State<LoginScreen>{
             SizedBox(height: 20),
             ElevatedButton(
                 onPressed: _login,
-                child: Text('Login')
+                child: Text('Login'),
             ),
+            SizedBox(height: 16),
+            Center(
+              child: TextButton(
+                  onPressed: (){
+                    Navigator.push(context,
+                    MaterialPageRoute(builder: (context)=>RegisterScreen())
+                    );
+                  },
+                  child: Text("Henüz hesabıız yok mu ? Hemen üye ol!")),
+            )
           ],
         ),
       ),
