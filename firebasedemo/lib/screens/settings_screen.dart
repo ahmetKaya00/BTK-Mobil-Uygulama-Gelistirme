@@ -15,7 +15,7 @@ class SettingsScreen extends StatelessWidget{
         Row(
         mainAxisAlignment: MainAxisAlignment.center,
           children: [
-          const Text('Koyu Tema'),
+            Text(localManager.translate('dark_theme')),
           Switch(
           value: themeManager.themeMode == ThemeMode.dark,
             onChanged: (value){

@@ -35,6 +35,7 @@ class MyApp extends StatelessWidget{
               Locale('en'),
               Locale('tr')
             ],
+            home: HomeScreen(),
           );
         },
       ),
